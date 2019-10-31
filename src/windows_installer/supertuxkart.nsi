@@ -117,7 +117,7 @@ Section -Prerequisites
   SetOutPath $INSTDIR\Prerequisites
   MessageBox MB_YESNO "Install Microsoft VC++ runtime libraries?" /SD IDYES IDNO endVC
     File "prerequisites\vcredist_x86.exe"
-    ExecWait "$INSTDIR\prerequisites\vcredist_x86.exe"
+    ExecWait "$INSTDIR\prerequisites\vcredist_x86.exe /q /norestart"
     Goto endVC
   endVC:
   MessageBox MB_YESNO "Install OpenAL sound libraries?" /SD IDYES IDNO endOA
